@@ -13,6 +13,94 @@ This Project Aim to improve C++ skills using STD library to create new tools. I 
 
 
 
+## How it works?
+
+Given input.txt file example for flights (Each line):
+
+```
+FLIGHT_NO TYPE	FROM	TO	SPEED	ALTITUDE
+38	COM	AMS	BUD	424	40000
+9	COM	ARN	BUD	450	38000
+119	COM	LHR	BUD	530	35000
+92	COM	STR	BUD	496	34800
+27	PRI	GRZ	BUD	136	7125
+2	PRI	QGY	BUD	145	18000
+12	MAC	FLR	BUD	200	11000
+```
+
+
+Based on this input file, algorithm put this flights on a landing Queue and gives directives for landing. And print all this results to output.txt file that also created by I/O file handler in project.
+
+## Example output.txt file
+This is demonstration for the output.txt file:
+```
+This is COM Commercial Flight with No: 38
+38, COM, AMS, BUD, 424, 40000
+Lower your speed: -354 Knots
+Lower your altitude: -40000 Ft
+Flight 38, you are at: 1 on Landing Queue.
+------
+
+This is COM Commercial Flight with No: 9
+9, COM, ARN, BUD, 450, 38000
+Lower your speed: -380 Knots
+Lower your altitude: -38000 Ft
+Flight 9, you are at: 2 on Landing Queue.
+------
+
+This is COM Commercial Flight with No: 119
+119, COM, LHR, BUD, 530, 35000
+Lower your speed: -460 Knots
+Lower your altitude: -35000 Ft
+Flight 119, you are at: 3 on Landing Queue.
+------
+
+This is COM Commercial Flight with No: 92
+92, COM, STR, BUD, 496, 34800
+Lower your speed: -426 Knots
+Lower your altitude: -34800 Ft
+Flight 92, you are at: 4 on Landing Queue.
+------
+
+This is PRI Private Flight branch of Commercial Flight with no: 27
+27, PRI, GRZ, BUD, 136, 7125
+Lower your speed: -36 Knots
+Lower your altitude: -7125 Ft
+Flight 27, you are at: 5 on Landing Queue.
+------
+
+This is PRI Private Flight branch of Commercial Flight with no: 2
+2, PRI, QGY, BUD, 145, 18000
+Lower your speed: -45 Knots
+Lower your altitude: -18000 Ft
+Flight 2, you are at: 6 on Landing Queue.
+------
+
+This is MAC Military Flight with No: 12
+12, MAC, FLR, BUD, 200, 11000
+Lower your speed: -60 Knots
+Lower your altitude: -11000 Ft
+Flight 12, you are at: 7 on Landing Queue.
+------
+
+------- Landing Queue Part (Test Cases) --------
+This is landing queue by Flight No ~ [First Second Third ... Last]:
+[ 38 9 119 92 27 2 12 ]
+
+-------
+Popping Landed Flights (5 Landing will be happen) from the queue, identify them by their Flight No:
+38
+9
+119
+92
+27
+Updated landing Queue after landings
+[ 2 12 ]
+```
+
+
+
+
 **Problem:**
 
 Planes Approach the Budapest Airport, they request landing through the radio system. There must be order to land.
@@ -40,16 +128,18 @@ I use Queue for landing order to make landings in order and identify their types
         * **Pri **- Private flight child of Commercial flight with shown value and method
 
 
-![alt_text](images/image4.png "image_tooltip")
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/63854390/168645177-55f06ae0-69a2-4df7-85cf-e4d377073eb3.png>
+</p>
 
 
 
 
 * **Queue **- Class that has DMA abilities, elements in queue also have linked list ability to point to each other(Node Struct).
 
-    
-![alt_text](images/image5.png "image_tooltip")
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/63854390/168645241-5c698f9b-afb6-4142-b758-3c2de0a21e93.png">
+</p>
 
 
 **Methods:**
@@ -160,95 +250,3 @@ I use Queue for landing order to make landings in order and identify their types
 
 
     It takes string and create output.txt file and append this string into this file each time it’s called.
-
-
-
-
-
-
-
-
-## How it works?
-
-Given input.txt file example for flights (Each line):
-
-```
-FLIGHT_NO TYPE	FROM	TO	SPEED	ALTITUDE
-38	COM	AMS	BUD	424	40000
-9	COM	ARN	BUD	450	38000
-119	COM	LHR	BUD	530	35000
-92	COM	STR	BUD	496	34800
-27	PRI	GRZ	BUD	136	7125
-2	PRI	QGY	BUD	145	18000
-12	MAC	FLR	BUD	200	11000
-```
-
-
-Based on this input file, algorithm put this flights on a landing Queue and gives directives for landing. And print all this results to output.txt file that also created by I/O file handler in project.
-
-## Example output.txt file
-This is demonstration for the output.txt file:
-```
-This is COM Commercial Flight with No: 38
-38, COM, AMS, BUD, 424, 40000
-Lower your speed: -354 Knots
-Lower your altitude: -40000 Ft
-Flight 38, you are at: 1 on Landing Queue.
-------
-
-This is COM Commercial Flight with No: 9
-9, COM, ARN, BUD, 450, 38000
-Lower your speed: -380 Knots
-Lower your altitude: -38000 Ft
-Flight 9, you are at: 2 on Landing Queue.
-------
-
-This is COM Commercial Flight with No: 119
-119, COM, LHR, BUD, 530, 35000
-Lower your speed: -460 Knots
-Lower your altitude: -35000 Ft
-Flight 119, you are at: 3 on Landing Queue.
-------
-
-This is COM Commercial Flight with No: 92
-92, COM, STR, BUD, 496, 34800
-Lower your speed: -426 Knots
-Lower your altitude: -34800 Ft
-Flight 92, you are at: 4 on Landing Queue.
-------
-
-This is PRI Private Flight branch of Commercial Flight with no: 27
-27, PRI, GRZ, BUD, 136, 7125
-Lower your speed: -36 Knots
-Lower your altitude: -7125 Ft
-Flight 27, you are at: 5 on Landing Queue.
-------
-
-This is PRI Private Flight branch of Commercial Flight with no: 2
-2, PRI, QGY, BUD, 145, 18000
-Lower your speed: -45 Knots
-Lower your altitude: -18000 Ft
-Flight 2, you are at: 6 on Landing Queue.
-------
-
-This is MAC Military Flight with No: 12
-12, MAC, FLR, BUD, 200, 11000
-Lower your speed: -60 Knots
-Lower your altitude: -11000 Ft
-Flight 12, you are at: 7 on Landing Queue.
-------
-
-------- Landing Queue Part (Test Cases) --------
-This is landing queue by Flight No ~ [First Second Third ... Last]:
-[ 38 9 119 92 27 2 12 ]
-
--------
-Popping Landed Flights (5 Landing will be happen) from the queue, identify them by their Flight No:
-38
-9
-119
-92
-27
-Updated landing Queue after landings
-[ 2 12 ]
-```
