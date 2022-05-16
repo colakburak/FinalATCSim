@@ -12,7 +12,7 @@ Given input file example for flights (Each line):
 ```
 FLIGHT_NO  TYPE	  FROM	TO	SPEED	ALTITUDE
 38	       COM	  AMS	  BUD	424	  40000
-9	         COM	  ARN	  BUD	450	  38000
+9          COM	  ARN	  BUD	450	  38000
 119	       COM	  LHR	  BUD	530	  35000
 ```
 
