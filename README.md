@@ -13,81 +13,153 @@ This Project Aim to improve C++ skills using STD library to create new tools. I 
 
 
 
-## Problem:
+**Problem:**
+
 Planes Approach the Budapest Airport, they request landing through the radio system. There must be order to land.
 
-## Solution:
+**Solution:**
+
 I use Queue for landing order to make landings in order and identify their types and required parameters in order to land to this airport.
 
-## Program Flow:
-Read input.txt file line by line and append them into vector
-Initialize the Flights for each line in this vector
-Add flights into the queue
-Create output.txt and print out all outlogs
-
-## Classes:
-Flight - Parent class with variables and methods shown in chart
-Mac - Military Flight child of Flight class with shown value and method
-Com - Commercial Flight child of Flight class with shown value and method
-Pri - Private flight child of Commercial flight with shown value and method
-
-Queue - Class that has DMA abilities, elements in queue also have linked list ability to point to each other(Node Struct).
+**Program Flow:**
 
 
 
-## Methods:
-Flight::getFlightInfo()
-Parameter Type -> None
-Return type -> string
-It shows/returns the flight info as string in “name, type, from, to, speed, altitude” format.
+1. Read input.txt file line by line and append them into vector
+2. Initialize the Flights for each line in this vector
+3. Add flights into the queue
+4. Create output.txt and print out all outlogs
 
-Flight::lowerAlt(double altitude)
-Parameter Type -> double
-Return type -> double
-It takes Current altitude and calculates and shows/returns how much altitude flight should decrease in order to land.
-
-[Com, Mac, Pri]::lowerSpeed()
-Parameter Type -> None
-Return type -> double
-It shows/returns how much speed should decrease in order to reach landing speed based on the type of the flight.
-
-Queue::print()
-Parameter Type -> None
-Return type -> string
-It show/returns the current status of the Queue as “[flightno1, flightno2, …, flightno#]” format.
-
-Queue::push(int num)
-Parameter Type -> int
-Return type -> void
-It takes a number and pushes that number into the Queue as FIFO format.
-
-Queue::pop()
-Parameter Type -> None
-Return type -> int
-It pops the first element of the Queue and returns to that element.
-
-Queue::isEmpty()
-Parameter Type -> None
-Return type -> bool
-It checks the queue if its empty or not based on that it returns either True(Empty) or False(Not empty)
-
-## Functions:
-readInput(string inputFileName)
-Parameter Type -> string
-Return type -> string vector
-It takes input filename as parameter and it returns a string vector which holds each line (Flight info) as an iterable element.
-
-splitByWords(string str)
-Parameter Type -> string
-Return type -> string vector
-It takes iterated results of the above function readInput() and splits lines as words and appends them into another string vector which is again iterable.
-
-writeOutLog(string out)
-Parameter Type -> string
-Return type -> None
-It takes string and create output.txt file and append this string into this file each time it’s called.
+**Classes:**
 
 
+
+* **Flight **- Parent class with variables and methods shown in chart
+    * **Mac **- Military Flight child of Flight class with shown value and method
+    * **Com **- Commercial Flight child of Flight class with shown value and method
+        * **Pri **- Private flight child of Commercial flight with shown value and method
+
+
+![alt_text](images/image4.png "image_tooltip")
+
+
+
+
+* **Queue **- Class that has DMA abilities, elements in queue also have linked list ability to point to each other(Node Struct).
+
+    
+![alt_text](images/image5.png "image_tooltip")
+
+
+
+**Methods:**
+
+
+
+* **Flight::getFlightInfo()**
+
+    Parameter Type -> None
+
+
+    Return type -> string
+
+
+    It shows/returns the flight info as string in “name, type, from, to, speed, altitude” format.
+
+* **Flight::lowerAlt(double altitude)**
+
+    Parameter Type -> double
+
+
+    Return type -> double
+
+
+    It takes Current altitude and calculates and shows/returns how much altitude flight should decrease in order to land.
+
+* **[Com, Mac, Pri]::lowerSpeed()**
+
+    Parameter Type -> None
+
+
+    Return type -> double
+
+
+    It shows/returns how much speed should decrease in order to reach landing speed based on the type of the flight.
+
+* **Queue::print()**
+
+    Parameter Type -> None
+
+
+    Return type -> string
+
+
+    It show/returns the current status of the Queue as “[flightno1, flightno2, …, flightno#]” format.
+
+* **Queue::push(int num)**
+
+    Parameter Type -> int
+
+
+    Return type -> void
+
+
+    It takes a number and pushes that number into the Queue as FIFO format.
+
+* **Queue::pop()**
+
+    Parameter Type -> None
+
+
+    Return type -> int
+
+
+    It pops the first element of the Queue and returns to that element.
+
+* **Queue::isEmpty()**
+
+    Parameter Type -> None
+
+
+    Return type -> bool
+
+
+    It checks the queue if its empty or not based on that it returns either True(Empty) or False(Not empty)
+
+
+**Functions:**
+
+
+
+* **readInput(string inputFileName)**
+
+    Parameter Type -> string
+
+
+    Return type -> string vector
+
+
+    It takes input filename as parameter and it returns a string vector which holds each line (Flight info) as an iterable element.
+
+* **splitByWords(string str)**
+
+    Parameter Type -> string
+
+
+    Return type -> string vector
+
+
+    It takes iterated results of the above function readInput() and splits lines as words and appends them into another string vector which is again iterable.
+
+* **writeOutLog(string out)**
+
+    Parameter Type -> string
+
+
+    Return type -> None
+
+
+    It takes string and create output.txt file and append this string into this file each time it’s called.
 
 
 
