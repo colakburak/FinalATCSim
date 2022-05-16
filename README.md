@@ -101,11 +101,11 @@ Updated landing Queue after landings
 
 
 
-**Problem:**
+## Problem:
 
 Planes Approach the Budapest Airport, they request landing through the radio system. There must be order to land.
 
-**Solution:**
+### Solution:
 
 I use Queue for landing order to make landings in order and identify their types and required parameters in order to land to this airport.
 
