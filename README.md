@@ -14,7 +14,7 @@ This Project Aim to improve C++ skills using STD library to create new tools. I 
 
 ## How it works?
 
-Given input file example for flights (Each line):
+Given input.txt file example for flights (Each line):
 
 ```
 FLIGHT_NO TYPE	FROM	TO	SPEED	ALTITUDE
@@ -28,4 +28,4 @@ FLIGHT_NO TYPE	FROM	TO	SPEED	ALTITUDE
 ```
 
 
-Based on this input file each line represent a flight, algorithm put this in a landing Queu and give directives for landing.
+Based on this input file, algorithm put this flights on a landing Queue and gives directives for landing. And print all this results to output.txt file that also created by I/O file handler in project.
