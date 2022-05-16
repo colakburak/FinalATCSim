@@ -8,7 +8,7 @@ This Project Aim to improve C++ skills using STD library to create new things. I
 
 <p align="center">
   <img width="100" height="100" src="https://user-images.githubusercontent.com/63854390/168570117-8d72bae4-517d-4b2f-ace3-a8874a182321.png">
-  <img width="100" height="100" src="https://user-images.githubusercontent.com/63854390/168570427-bd48d072-cc78-433e-ae1a-fe40575e1968.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/63854390/168570722-d527ff13-3dd6-4169-857a-3a4d3db0dc33.png">
 </p>
 
 
