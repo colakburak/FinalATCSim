@@ -2,9 +2,14 @@
 
 This Project Aim to improve C++ skills using STD library to create new things. I made Queue, I/O file handler etc by from scratch. This project made for BOP2 courses given by BME.
 
-<p align="center">
+<p align="left">
   <img width="400" height="100" src="https://user-images.githubusercontent.com/63854390/168567286-37e46891-b19b-4209-8038-9b142c753dfe.png">
 </p>
+
+<p align="right">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/63854390/168570117-8d72bae4-517d-4b2f-ace3-a8874a182321.png">
+</p>
+
 
 ## How it works?
 
